@@ -16,34 +16,34 @@ void menu(Horoscopes h) {
   while (choice != 8) {
     switch(choice) {
       case 1:{
-        cout << "Romance Reading:" << endl;
+        cout << "\nRomance Reading:" << endl;
         reading.Romance();
         }break;
       case 2:{
         string anotherSign;
-        cout << "Compatibility With Another Sign Reading:" << endl;
+        cout << "\nCompatibility With Another Sign Reading:" << endl;
         cout << "Enter another sign that you want to see compatibility with:" << endl;
         cin >> anotherSign;
         reading.CompatabilityWithSigns(anotherSign);
         }break;
       case 3:{
-        cout << "Finance Reading:" << endl;
+        cout << "\nFinance Reading:" << endl;
         reading.Finance();
         }break;
       case 4:{
-        cout << "Personality Reading:" << endl;
+        cout << "\nPersonality Reading:" << endl;
         reading.Personality();
         }break;
       case 5:{
-        cout << "Quarantine Lifestyle Reading:" << endl;
+        cout << "\nQuarantine Lifestyle Reading:" << endl;
         reading.QuarantineLifestyle();
         }break;
       case 6:{
-        cout << "Mood Reading:" << endl;
+        cout << "\nMood Reading:" << endl;
         reading.Mood();
         }break;
       case 7:{
-        cout << "Luck Reading:" << endl;
+        cout << "\nLuck Reading:" << endl;
         reading.Luck();
         }break;
     }
@@ -53,6 +53,7 @@ void menu(Horoscopes h) {
 }
 
 void options() {
+  cout << "\nMENU" << endl;
   cout << "1. Romance" << endl;
   cout << "2. Compatibility With Another Sign" << endl;
   cout << "3. Finance" << endl;
