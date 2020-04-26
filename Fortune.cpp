@@ -8,6 +8,7 @@ Fortune::Fortune() {
 
 Fortune::Fortune(Horoscopes h) {
   sign = h;
+  srand(time(0)); 
   luck = rand() % 100 + 1;
 }
     
@@ -51,6 +52,10 @@ void Fortune::Romance() {
 }
 
 void Fortune::CompatabilityWithSigns(const string & otherSign) {
+  if ((otherSign != "Aries") || (otherSign != "Taurus") || (otherSign != "Gemini") || (otherSign != "Cancer") ||(otherSign != "Leo") ||(otherSign != "Virgo") ||(otherSign != "Libra") || (otherSign != "Scorpio") || (otherSign != "Sagittarius") ||(otherSign != "Capricorn") || (otherSign != "Aquarius") || (otherSign != "Pisces")) {
+    cout << "ERROR: incorrect star sign" << endl;
+  }
+
   if (sign.getStarSign() == "Aries") {
     if (otherSign == "Aries"){
       cout << "OMG y'all are gonna be besties! SUPER compatible." << endl;
@@ -501,7 +506,7 @@ void Fortune::Mood() {
 
 void Fortune::Luck() {
   if (luck < 77) {
-    cout << "Unfortunately, the weather isn't looking very good for you. Your is " << luck << "% today. Hopefully tomorrow will be a better day and the sun shines brightly for you." << endl;
+    cout << "Unfortunately, the weather isn't looking very good for you. Your is luck " << luck << "% today. Hopefully tomorrow will be a better day and the sun shines brightly for you." << endl;
   }else {
     cout << "You are " << luck << "% luck today!! Today, everything will be in your favor as the weather is on your side today!" << endl;
   }
